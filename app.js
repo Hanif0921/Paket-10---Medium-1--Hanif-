@@ -52,6 +52,13 @@ function applyTheme(theme, persist = false) {
 
 applyTheme(document.documentElement.dataset.theme || 'light');
 
+const header = $('.topbar');
+const updateHeaderOnScroll = () => {
+  header.classList.toggle('topbar--scrolled', window.scrollY > 0);
+};
+window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+updateHeaderOnScroll();
+
 function showToast(message, type = 'success') {
   const toast = $('#toast');
   toast.textContent = message;
