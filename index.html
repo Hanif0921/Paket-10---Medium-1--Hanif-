@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f6f7f2">
+    <meta name="description" content="Susun perjalanan, pilih kendaraan, dan hitung estimasi anggaran liburan keluarga.">
+    <title>Rute — Rencanakan Liburan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { forest: '#173f35', lime: '#d9ef74', paper: '#f6f7f2' }, fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Manrope', 'sans-serif'] } } } };
+    </script>
+    <script>
+        try {
+            if (localStorage.getItem('rute-theme') === 'dark') document.documentElement.dataset.theme = 'dark';
+        } catch {}
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./theme.css">
+</head>
+<body class="bg-paper text-forest font-sans">
+    <header class="topbar">
+        <a class="wordmark" href="#top" aria-label="Rute, beranda"><span class="wordmark__mark">r.</span>rute<span class="wordmark__dot">.</span></a>
+        <nav class="topnav" aria-label="Navigasi utama"><a href="#destinations">Destinasi</a><a href="#vehicles">Kendaraan</a><a href="#vouchers">Voucher</a></nav>
+        <div class="header-actions">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Aktifkan tema gelap" aria-pressed="false" title="Aktifkan tema gelap"><span aria-hidden="true">☾</span></button>
+            <a class="cart-link" href="#booking-cart"><span class="cart-link__icon" aria-hidden="true">↗</span> Rencana <span class="cart-count" id="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero-shell">
+            <div class="hero-copy">
+                <div class="hero-kicker"><span></span> TRIP PLANNER · ESTIMASI</div>
+                <h1>Liburan jauh,<br><em>rencana matang.</em></h1>
+                <p>Temukan tempatnya. Pilih kendaraan yang pas. Ketahui estimasi biayanya sebelum berangkat.</p>
+                <a class="hero-cta" href="#destinations">Mulai susun perjalanan <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-art" role="img" aria-label="Pemandangan gunung untuk inspirasi perjalanan">
+                <div class="hero-art__image"></div>
+                <div class="hero-stamp"><span>GOOD<br>TRIPS</span><b>✳</b></div>
+                <div class="hero-caption"><span>01 — 05</span><span>THE WORLD IS OPEN</span></div>
+            </div>
+            <div class="hero-index"><span>ESTIMASI PERJALANAN</span><b>01</b><span>—</span><span>RUTE / ID</span></div>
+        </section>
+
+        <div class="page-rule"><span>01</span><span>PILIH TUJUAN</span><span class="page-rule__line"></span><span>JELAJAHI BERDASARKAN RASA INGIN TAHU</span></div>
+
+        <section class="destination-section section-shell" id="destinations">
+            <div class="section-heading">
+                <div><p class="eyebrow">MULAI DARI SINI</p><h2>Ke mana kita pergi?</h2></div>
+                <p class="section-note">Pilih satu tujuan untuk mulai merangkai perjalanan.</p>
+            </div>
+            <div class="destination-layout">
+                <div class="destination-browser">
+                    <div class="filter-bar">
+                        <label class="search-field"><span aria-hidden="true">⌕</span><input id="destination-search" type="search" placeholder="Cari destinasi..." aria-label="Cari destinasi"></label>
+                        <select id="continent-filter" aria-label="Filter benua"><option value="">Semua benua</option><option>Asia</option><option>Africa</option><option>Europe</option><option>America</option><option>Australia</option></select>
+                        <select id="destination-sort" aria-label="Urutkan destinasi"><option value="az">Nama A–Z</option><option value="days14-asc">14 hari · termurah</option><option value="days14-desc">14 hari · termahal</option><option value="days28-asc">28 hari · termurah</option><option value="days28-desc">28 hari · termahal</option></select>
+                    </div>
+                    <div id="destination-list" class="destination-list" aria-live="polite"></div>
+                </div>
+                <aside class="destination-preview-wrap"><div class="aside-label"><span>CATATAN PERJALANAN</span><span>↘</span></div><div id="destination-preview" class="destination-preview"></div></aside>
+            </div>
+        </section>
+
+        <section class="planner-section" id="planner">
+            <div class="planner-inner section-shell">
+                <div class="planner-heading">
+                    <div><p class="eyebrow eyebrow--light">02 — ATUR PERJALANAN</p><h2>Perjalanan yang pas<br>untuk <em>semua orang.</em></h2></div>
+                    <p>Durasi, jumlah penumpang, dan wilayah tujuan akan menentukan pilihan kendaraan yang tersedia.</p>
+                </div>
+                <div class="planner-controls">
+                    <fieldset class="duration-control"><legend>Durasi perjalanan</legend><div class="segmented-control"><label><input type="radio" name="duration" value="days14" checked><span>14 hari</span></label><label><input type="radio" name="duration" value="days28"><span>28 hari</span></label></div></fieldset>
+                    <label class="passenger-control" for="passenger-count"><span>Anggota keluarga</span><span class="number-field"><input id="passenger-count" type="number" min="1" max="30" value="4"><small>ORANG</small></span></label>
+                    <fieldset class="service-control"><legend>Layanan kendaraan</legend><div class="segmented-control"><label><input type="radio" name="car-service" value="single" checked><span>Lepas kunci</span></label><label><input type="radio" name="car-service" value="driver"><span>Dengan sopir</span></label></div></fieldset>
+                </div>
+                <div class="car-section-heading" id="vehicles"><div><p class="eyebrow eyebrow--light">ARMADA YANG TERSEDIA</p><h3>Pilih teman jalan.</h3></div><span class="availability-note" id="availability-note">Pilih destinasi untuk melihat mobil di wilayah tersebut.</span></div>
+                <div class="car-controls">
+                    <label class="search-field search-field--dark"><span aria-hidden="true">⌕</span><input id="car-search" type="search" placeholder="Cari nama mobil..." aria-label="Cari mobil"></label>
+                    <select id="brand-filter" aria-label="Filter merek"><option value="">Semua merek</option><option>Toyota</option><option>Mitsubishi</option><option>Honda</option></select>
+                    <select id="car-sort" aria-label="Urutkan mobil"><option value="az">Nama A–Z</option><option value="year-asc">Tahun tua → muda</option><option value="year-desc">Tahun muda → tua</option><option value="price-asc">Harga terendah</option><option value="price-desc">Harga tertinggi</option></select>
+                </div>
+                <div id="car-list" class="car-list" aria-live="polite"></div>
+                <div id="car-preview" class="car-preview"></div>
+            </div>
+        </section>
+
+        <section class="checkout-section section-shell" id="booking-cart">
+            <div class="checkout-heading"><div><p class="eyebrow">03 — RANGKUMAN BIAYA</p><h2>Hitung sebelum berangkat.</h2></div><p>Harga sewa dihitung per hari sesuai durasi perjalanan.</p></div>
+            <div class="checkout-layout">
+                <div class="checkout-main">
+                    <div class="promo-panel" id="vouchers"><div class="promo-panel__heading"><span class="promo-panel__symbol">%</span><div><h3>Potong dengan voucher</h3><p>Pilih promo yang sesuai dengan rencana Anda.</p></div></div>
+                        <div class="promo-form"><select id="promo-code" aria-label="Pilih voucher promo"><option value="">Memuat voucher...</option></select><button class="button button--outline" id="apply-promo">Terapkan</button></div><p class="promo-feedback" id="promo-feedback" aria-live="polite"></p>
+                    </div>
+                    <div class="promo-list-wrap"><div class="promo-list-heading"><h3>Semua voucher</h3><span>SYARAT BERLAKU</span></div><div id="promo-list" class="promo-list"></div></div>
+                </div>
+                <aside class="cart-panel"><div class="cart-panel__head"><div><p class="eyebrow">BOOKING CART</p><h3>Rencana Anda <span id="cart-count-label">(0)</span></h3></div><span class="cart-panel__icon">↗</span></div>
+                    <div id="cart-list" class="cart-list"></div>
+                    <div class="cart-summary"><div><span>Subtotal paket</span><strong id="cart-subtotal">Rp0</strong></div><div class="cart-summary__total"><span>Total estimasi</span><strong id="cart-total">Rp0</strong></div><p>Estimasi belum termasuk biaya pribadi dan tiket tambahan.</p></div>
+                    <button class="button button--lime button--wide" id="add-to-cart">Tambahkan kombinasi ke keranjang <span aria-hidden="true">＋</span></button>
+                    <p class="cart-save-note"><span>●</span> Tersimpan otomatis di perangkat ini</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><a class="wordmark wordmark--footer" href="#top"><span class="wordmark__mark">r.</span>rute<span class="wordmark__dot">.</span></a><span>PERJALANAN YANG BAIK DIMULAI DARI RENCANA.</span><a href="#top">Kembali ke atas ↑</a></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
