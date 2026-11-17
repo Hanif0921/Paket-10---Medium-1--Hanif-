@@ -1,0 +1,242 @@
+[
+    {
+        "carName": "AVANZA",
+        "Brand": "Toyota",
+        "Year": 2019,
+        "Price": {
+            "single": 350000,
+            "driver": 500000
+        },
+        "capacity": 7,
+        "transmission": "Manual",
+        "availableContinent": ["Asia", "Africa"]
+    },
+    {
+        "carName": "INNOVA",
+        "Brand": "Toyota",
+        "Year": 2020,
+        "Price": {
+            "single": 500000,
+            "driver": 650000
+        },
+        "capacity": 7,
+        "transmission": "Automatic",
+        "availableContinent": ["Asia"]
+    },
+    {
+        "carName": "PAJERO",
+        "Brand": "Mitsubishi",
+        "Year": 2018,
+        "Price": {
+            "single": 1300000,
+            "driver": 1500000
+        },
+        "capacity": 7,
+        "transmission": "Automatic",
+        "availableContinent": ["Asia", "Australia", "Africa"]
+    },
+    {
+        "carName": "HILUX",
+        "Brand": "Toyota",
+        "Year": 2018,
+        "Price": {
+            "single": 1300000,
+            "driver": 1500000
+        },
+        "capacity": 5,
+        "transmission": "Manual",
+        "availableContinent": ["Asia", "Africa", "Australia", "Europe"]
+    },
+    {
+        "carName": "BRIO",
+        "Brand": "Honda",
+        "Year": 2023,
+        "Price": {
+            "single": 350000,
+            "driver": 500000
+        },
+        "capacity": 5,
+        "transmission": "Automatic",
+        "availableContinent": ["Asia"]
+    },
+    {
+        "carName": "ALPHARD",
+        "Brand": "Toyota",
+        "Year": 2019,
+        "Price": {
+            "single": 4500000,
+            "driver": 5000000
+        },
+        "capacity": 7,
+        "transmission": "Automatic",
+        "availableContinent": ["Asia", "Australia"]
+    },
+    {
+        "carName": "TRITON",
+        "Brand": "Mitsubishi",
+        "Year": 2021,
+        "Price": {
+            "single": 1300000,
+            "driver": 1500000
+        },
+        "capacity": 5,
+        "transmission": "Manual",
+        "availableContinent": ["Asia", "Australia", "Africa"]
+    },
+    {
+        "carName": "FORTUNER",
+        "Brand": "Toyota",
+        "Year": 2022,
+        "Price": {
+            "single": 1300000,
+            "driver": 1500000
+        },
+        "capacity": 7,
+        "transmission": "Automatic",
+        "availableContinent": ["Asia", "Africa", "Australia"]
+    },
+    {
+        "carName": "XPANDER",
+        "Brand": "Mitsubishi",
+        "Year": 2021,
+        "Price": {
+            "single": 400000,
+            "driver": 500000
+        },
+        "capacity": 7,
+        "transmission": "Automatic",
+        "availableContinent": ["Asia", "Africa"]
+    },
+    {
+        "carName": "HIACE",
+        "Brand": "Toyota",
+        "Year": 2023,
+        "Price": {
+            "single": 1700000,
+            "driver": 2500000
+        },
+        "capacity": 15,
+        "transmission": "Manual",
+        "availableContinent": ["Asia", "Africa", "Australia"]
+    },
+    {
+        "carName": "CIVIC",
+        "Brand": "Honda",
+        "Year": 2022,
+        "Price": {
+            "single": 800000,
+            "driver": 1000000
+        },
+        "capacity": 5,
+        "transmission": "Automatic",
+        "availableContinent": ["Asia", "America", "Europe", "Australia"]
+    },
+    {
+        "carName": "MUSTANG",
+        "Brand": "Ford",
+        "Year": 2021,
+        "Price": {
+            "single": 3500000,
+            "driver": 4200000
+        },
+        "capacity": 4,
+        "transmission": "Automatic",
+        "availableContinent": ["America", "Europe", "Australia"]
+    },
+    {
+        "carName": "GOLF",
+        "Brand": "Volkswagen",
+        "Year": 2020,
+        "Price": {
+            "single": 900000,
+            "driver": 1200000
+        },
+        "capacity": 5,
+        "transmission": "Manual",
+        "availableContinent": ["Europe", "America", "Australia"]
+    },
+    {
+        "carName": "MODEL 3",
+        "Brand": "Tesla",
+        "Year": 2023,
+        "Price": {
+            "single": 2500000,
+            "driver": 3000000
+        },
+        "capacity": 5,
+        "transmission": "Automatic",
+        "availableContinent": ["America", "Europe", "Asia", "Australia"]
+    },
+    {
+        "carName": "LAND CRUISER",
+        "Brand": "Toyota",
+        "Year": 2022,
+        "Price": {
+            "single": 4000000,
+            "driver": 4800000
+        },
+        "capacity": 7,
+        "transmission": "Automatic",
+        "availableContinent": ["Asia", "Africa", "Australia", "America"]
+    },
+    {
+        "carName": "SPRINTER",
+        "Brand": "Mercedes-Benz",
+        "Year": 2021,
+        "Price": {
+            "single": 2800000,
+            "driver": 3500000
+        },
+        "capacity": 14,
+        "transmission": "Manual",
+        "availableContinent": ["Europe", "America", "Australia"]
+    },
+    {
+        "carName": "WRANGLER",
+        "Brand": "Jeep",
+        "Year": 2020,
+        "Price": {
+            "single": 2200000,
+            "driver": 2700000
+        },
+        "capacity": 5,
+        "transmission": "Manual",
+        "availableContinent": ["America", "Africa", "Australia"]
+    },
+    {
+        "carName": "3 SERIES",
+        "Brand": "BMW",
+        "Year": 2022,
+        "Price": {
+            "single": 2600000,
+            "driver": 3200000
+        },
+        "capacity": 5,
+        "transmission": "Automatic",
+        "availableContinent": ["Europe", "America", "Asia"]
+    },
+    {
+        "carName": "CARNIVAL",
+        "Brand": "Kia",
+        "Year": 2023,
+        "Price": {
+            "single": 1500000,
+            "driver": 1900000
+        },
+        "capacity": 8,
+        "transmission": "Automatic",
+        "availableContinent": ["Asia", "America", "Australia"]
+    },
+    {
+        "carName": "IONIQ 5",
+        "Brand": "Hyundai",
+        "Year": 2023,
+        "Price": {
+            "single": 1600000,
+            "driver": 2000000
+        },
+        "capacity": 5,
+        "transmission": "Automatic",
+        "availableContinent": ["Asia", "Europe", "America", "Australia"]
+    }
+]

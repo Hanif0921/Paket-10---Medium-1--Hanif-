@@ -1,0 +1,162 @@
+[
+    {
+        "id": "PRM001",
+        "promoCode": "ASIAEXPLORER",
+        "title": "Eksplorasi Benua Asia",
+        "description": "Diskon 10% untuk semua paket wisata di benua Asia.",
+        "discountPercentage": 10,
+        "minTransaction": 20000000,
+        "conditions": {
+            "targetContinent": ["Asia"],
+            "targetCarBrand": null,
+            "minCarCapacity": null,
+            "requiredDuration": null,
+            "requiredCarService": null,
+            "requireBundling": false
+        }
+    },
+    {
+        "id": "PRM002",
+        "promoCode": "TOYOTATRIP",
+        "title": "Promo Bundling Armada Toyota",
+        "description": "Diskon 12% khusus pemesanan destinasi wisata yang disertai sewa mobil merek Toyota.",
+        "discountPercentage": 12,
+        "minTransaction": 25000000,
+        "conditions": {
+            "targetContinent": null,
+            "targetCarBrand": ["Toyota"],
+            "minCarCapacity": null,
+            "requiredDuration": null,
+            "requiredCarService": null,
+            "requireBundling": true
+        }
+    },
+    {
+        "id": "PRM003",
+        "promoCode": "LONGSTAY28",
+        "title": "Liburan Panjang 28 Hari",
+        "description": "Potongan ekstra 15% khusus untuk pengambilan paket wisata durasi 28 hari di semua benua.",
+        "discountPercentage": 15,
+        "minTransaction": 30000000,
+        "conditions": {
+            "targetContinent": null,
+            "targetCarBrand": null,
+            "minCarCapacity": null,
+            "requiredDuration": "days28",
+            "requiredCarService": null,
+            "requireBundling": false
+        }
+    },
+    {
+        "id": "PRM004",
+        "promoCode": "FAMILYVAN",
+        "title": "Paket Rombongan & Keluarga",
+        "description": "Diskon 10% jika menyewa mobil berkapasitas minimal 7 penumpang beserta paket wisata.",
+        "discountPercentage": 10,
+        "minTransaction": 25000000,
+        "conditions": {
+            "targetContinent": null,
+            "targetCarBrand": null,
+            "minCarCapacity": 7,
+            "requiredDuration": null,
+            "requiredCarService": null,
+            "requireBundling": true
+        }
+    },
+    {
+        "id": "PRM005",
+        "promoCode": "CHAUFFEURVIP",
+        "title": "Perjalanan Nyaman dengan Sopir",
+        "description": "Diskon 8% untuk penyewaan mobil dengan layanan sopir (driver) di benua Eropa atau Amerika.",
+        "discountPercentage": 8,
+        "minTransaction": 45000000,
+        "conditions": {
+            "targetContinent": ["Europe", "America"],
+            "targetCarBrand": null,
+            "minCarCapacity": null,
+            "requiredDuration": null,
+            "requiredCarService": "driver",
+            "requireBundling": true
+        }
+    },
+    {
+        "id": "PRM006",
+        "promoCode": "MITSUBISHIADV",
+        "title": "Petualangan Ekstrem Mitsubishi",
+        "description": "Diskon 15% untuk sewa mobil Mitsubishi dengan tujuan wisata di Asia, Afrika, atau Australia.",
+        "discountPercentage": 15,
+        "minTransaction": 22000000,
+        "conditions": {
+            "targetContinent": ["Asia", "Africa", "Australia"],
+            "targetCarBrand": ["Mitsubishi"],
+            "minCarCapacity": null,
+            "requiredDuration": null,
+            "requiredCarService": null,
+            "requireBundling": true
+        }
+    },
+    {
+        "id": "PRM007",
+        "promoCode": "EUROAMERICA20",
+        "title": "Jelajah Barat Super Hemat",
+        "description": "Diskon spesial 20% untuk paket 28 hari ke benua Eropa atau Amerika.",
+        "discountPercentage": 20,
+        "minTransaction": 60000000,
+        "conditions": {
+            "targetContinent": ["Europe", "America"],
+            "targetCarBrand": null,
+            "minCarCapacity": null,
+            "requiredDuration": "days28",
+            "requiredCarService": null,
+            "requireBundling": false
+        }
+    },
+    {
+        "id": "PRM008",
+        "promoCode": "SOLODRIVE14",
+        "title": "Bebas Menyetir Sendiri 14 Hari",
+        "description": "Diskon 5% untuk paket singkat 14 hari dengan sewa mobil lepas kunci (single).",
+        "discountPercentage": 5,
+        "minTransaction": 20000000,
+        "conditions": {
+            "targetContinent": null,
+            "targetCarBrand": null,
+            "minCarCapacity": null,
+            "requiredDuration": "days14",
+            "requiredCarService": "single",
+            "requireBundling": true
+        }
+    },
+    {
+        "id": "PRM009",
+        "promoCode": "GREENFUTURE",
+        "title": "Promo Kendaraan Modern & Elektrik",
+        "description": "Diskon 12% khusus sewa mobil Tesla atau Hyundai untuk perjalanan di benua mana saja.",
+        "discountPercentage": 12,
+        "minTransaction": 30000000,
+        "conditions": {
+            "targetContinent": null,
+            "targetCarBrand": ["Tesla", "Hyundai"],
+            "minCarCapacity": null,
+            "requiredDuration": null,
+            "requiredCarService": null,
+            "requireBundling": true
+        }
+    },
+    {
+        "id": "PRM010",
+        "promoCode": "BIGGROUPBUS",
+        "title": "Ekspedisi Rombongan Besar",
+        "description": "Potongan 18% untuk penyewaan Hiace atau Sprinter (kapasitas >= 14 kursi) bersama paket wisata.",
+        "discountPercentage": 18,
+        "minTransaction": 40000000,
+        "conditions": {
+            "targetContinent": null,
+            "targetCarBrand": ["Toyota", "Mercedes-Benz"],
+            "minCarCapacity": 14,
+            "requiredDuration": null,
+            "requiredCarService": null,
+            "requireBundling": true
+        }
+    }
+]
