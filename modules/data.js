@@ -62,7 +62,7 @@ export const getCarImage = (car) => {
     mustang: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80',
     golf: 'volkswagengolf.jpg',
     model3: 'teslamodel3.jpg',
-    landcruiser: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80',
+    landcruiser: 'toyotalandcruiser.jpg',
     sprinter: 'mercedezbenssprinted.jpg',
     wrangler: 'jeepwrangler.jpg',
     '3series': 'bmw3series.jpg',
