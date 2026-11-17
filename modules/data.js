@@ -62,12 +62,12 @@ export const getCarImage = (car) => {
     mustang: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80',
     golf: 'https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80',
     model3: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80',
-    landcruiser: 'https://images.unsplash.com/photo-1503376780353-7c5e8d7e0f6e?auto=format&fit=crop&w=1200&q=80',
+    landcruiser: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80',
     sprinter: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&q=80',
     wrangler: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80',
     '3series': 'https://images.unsplash.com/photo-1494905998402-395d579af36f?auto=format&fit=crop&w=1200&q=80',
     carnival: 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80',
-    ioniq5: 'https://images.unsplash.com/photo-1489829545089-8d7d68d4d3ef?auto=format&fit=crop&w=1200&q=80',
+    ioniq5: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1200&q=80',
   };
 
   const resolved = images[key];
